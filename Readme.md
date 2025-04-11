@@ -13,4 +13,4 @@ python main.py --epoch 200 --dataset IMDB --n-fp-layers 2 --n-task-layers 4 --nu
 
 ## **Dataset**
 
-All the processed datasets we used in the paper can be downloaded at [Baidu Yun](https://pan.baidu.com/s/1qpchYQqM_nsFSajxI_JaOQ) (password:lhgac). Put datasets in the folder 'data/' to run experimments.
+All the processed datasets we used in the paper can be downloaded at [Baidu Yun](https://pan.baidu.com/s/1qpchYQqM_nsFSajxI_JaOQ) (password:hgac). Put datasets in the folder 'data/' to run experimments.
