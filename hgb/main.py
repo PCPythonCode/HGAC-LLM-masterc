@@ -390,11 +390,11 @@ def main(args):
         
         llm_model = LLM_model(args.hidden, args.dataset, device)
         llm_graph_emb = llm_model.graph_encode()
-        dropout_rate = 0.5
+        
 
         model = HGAC(args.dataset, args.embed_size, args.hidden, num_classes, feats.keys(), label_feats.keys(), tgt_type,
                        args.dropout, args.input_drop, args.att_drop, args.n_fp_layers, args.n_task_layers, args.act,
-                       args.residual, dropout_rate, data_size=data_size,llm_graph_emb = llm_graph_emb)
+                       args.residual, data_size=data_size,llm_graph_emb = llm_graph_emb)
         model = model.to(device)
         
         if args.seed == args.seeds[0]:
@@ -566,7 +566,7 @@ def parse_args(args=None):
     parser.add_argument('--n-task-layers', type=int, default=3,
                         help='the number of mlp layers for the downstream task')
     parser.add_argument('--hidden', type=int, default=512)
-    parser.add_argument('--dropout', type=float, default=0.5,
+    parser.add_argument('--dropout', type=float, default=0.3,
                         help='dropout on activation')
     parser.add_argument('--input-drop', type=float, default=0.1,
                         help='input dropout of input features')
@@ -580,8 +580,8 @@ def parse_args(args=None):
     ## for training
     parser.add_argument('--amp', action='store_true', default=False,
                         help='whether to amp to accelerate training with float16(half) calculation')
-    parser.add_argument('--lr', type=float, default=0.001)
-    parser.add_argument('--weight-decay', type=float, default=0)
+    parser.add_argument('--lr', type=float, default=0.005)
+    parser.add_argument('--weight-decay', type=float, default=0.4)
     parser.add_argument('--batch-size', type=int, default=10000)
     parser.add_argument('--patience', type=int, default=50,
                         help='early stop patience')
