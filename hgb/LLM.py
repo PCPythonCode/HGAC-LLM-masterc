@@ -31,7 +31,7 @@ class LLM_model(torch.nn.Module):
         elif self.dataset == "DBLP":
             text = "The construction of the DBLP dataset is based on academic literature in the field of computer science, covering a wide range of research topics. It consists of four types of nodes (author, paper, term, venue) and three types of relationships (author-publishes-paper, paper-contains-term, paper-belongs-venue)."
         elif self.dataset == "Yelp-nc":
-            text = "Yelp is a business review net containing timestamped user reviews and tips on businesses. There are four types of nodes (users, service, level and business) and three types of edges (user-tip-business and userreview-business) in the temporal heterogeneous graph constructed based on it."
+            text = "Yelp is a business review net containing timestamped user reviews and tips on businesses. There are four types of nodes (users, service, level and business) and three types of edges in the temporal heterogeneous graph constructed based on it."
         request = "Please output a summary of the information about this heterogeneous graph in the following format: {NodeType:,Attribute:}."
         summary = client.chat.completions.create(
             model="gpt-3.5-turbo",
