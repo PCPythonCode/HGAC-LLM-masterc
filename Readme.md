@@ -1,8 +1,8 @@
-# SeHGNN on the four medium-scale datasets
+
 
 ## Training
 
-To reproduce the results of SeHGNN on four medium-scale datasets, please run following commands.
+To reproduce the results of HGAC-LLM on four medium-scale datasets, please run following commands.
 
 For **IMDB**:
 
