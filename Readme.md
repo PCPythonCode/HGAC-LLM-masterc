@@ -2,7 +2,7 @@
 
 ## Training
 
-To reproduce the results of HGAC-LLM on four medium-scale datasets, please run following commands.
+To reproduce the results of HGAC-LLM on six datasets, please run following commands.
 
 For **IMDB**:
 
