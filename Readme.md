@@ -17,6 +17,4 @@ top_p=1.0,
 presence_penalty=0.1,
 frequency_penalty=0,
 
-## **Dataset**
 
-All the processed datasets we used in the paper can be downloaded at [Baidu Yun](https://pan.baidu.com/s/1qpchYQqM_nsFSajxI_JaOQ) (password:hgac). Put datasets in the folder 'data/' to run experimments.
