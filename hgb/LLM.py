@@ -6,7 +6,7 @@ from openai import OpenAI
 class LLM_model(torch.nn.Module):
     def __init__(
         self,
-        hid_dim,
+        hidden,
         dataset,
         device
     ):
