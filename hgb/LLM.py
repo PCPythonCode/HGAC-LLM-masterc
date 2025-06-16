@@ -190,7 +190,11 @@ class LLM_model(torch.nn.Module):
             messages=[
                 {"role": "system", "content": "You are a good assistant. Please infer the information of nodes without attributes based on the known information of each node."},
                 {"role": "user", "content": text+request}
-            ]
+            ],
+        temperature=0.2,
+        top_p=0.7,
+        max_tokens=1024,
+        stream=True
         ).choices[0].message.content
         # print(summary)
         emb = client.embeddings.create(
